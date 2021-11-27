@@ -1,3 +1,4 @@
+
 :root {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --color-blue: #005c80;
@@ -31,3 +32,18 @@ main {
   margin: 10px;
   background: var(--color-gray);
 }
+.card:nth-child(3){
+  flex-grow: 1;
+}
+button{
+    padding: 5px 25px;
+    border: 1px solid #e2dfdf;
+    font-size: medium;
+    cursor: pointer;
+    position: relative;
+    left: 5%;
+    margin: 0px 2%;
+  }
+  button:active{
+    filter: brightness(80%);
+  }
