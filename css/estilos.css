@@ -45,5 +45,5 @@ button{
     margin: 0px 2%;
   }
   button:active{
-    filter: brightness(80%);
+    filter: brightness(70%);
   }
