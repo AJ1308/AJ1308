@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 20%;
+  background: darkslategray;
+}
+#box1 {
+  width: 400px;
+  height: 400px;
+  background: skyblue;
+  position: relative;
+}
+.box {
+  background: tomato;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.child-box {
+  background: lime;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+#box2 {
+  top: 0;
+  right: 0px;
+}
+#box3 {
+  right: 40%;
+  top: 35%;
+}
+#box4 {
+  bottom: 0;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  background: purple;
+  border-radius: 50%;
+  position: absolute;
+  color: white;
+}
+#circle1 {
+  top: -30px;
+  right: 35px;
+}
+#circle2 {
+  top: 35px;
+  right: 100px;
+}
+#circle3 {
+  top: 35px;
+  left: 100px;
+}
+#circle4 {
+  bottom: -30px;
+  right: 35px;
+}
+/*Posicionamiento fijo*/
+.rectangulo {
+  width: 100px;
+  height: 40px;
+  background: goldenrod;
+  top: 100px;
+  right: 100px;
+  z-index: 1;
+}
+.fijo {
+  position: fixed;
+}
+.pegajoso{
+    position: sticky;
+}

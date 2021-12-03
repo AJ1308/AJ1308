@@ -1,0 +1,10 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+input, select{
+    display: block;
+    margin-bottom: 15px;
+}
+input[type="radio"], input[type="checkbox"]{
+    display: inline;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Uso de etiquetas en formularios</title>
+</head>
+<body>
+    <form action="/send.php" name="formulario" method="post"></form>
+    <fieldset>
+        <!--Agrupación de campos-->
+        <legend>Datos personales</legend>
+        <!--Campos de texto-->
+        Nombre de Usuario:
+        <input type="text" name="nombre" placeholder="Por ej: Jonh Smith" tabindex="1"/><br>
+        <!--Campo Númerico-->
+        Edad: 
+        <input type="number" name="edad" min="18" max="150" placeholder="18" tabindex="3"/><br>
+        <!--Botón radio de opción-->
+        Sexo:
+        <input type="radio" name="sexo" value="H"/>Hombre
+        <input type="radio" name="sexo" value="M"/>Mujer
+    </fieldset>
+</body>
+</html>
