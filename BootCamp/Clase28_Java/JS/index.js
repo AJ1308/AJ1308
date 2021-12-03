@@ -21,3 +21,5 @@ console.log(numero_decimal)
 console.log(resultado)
 console.log("El area del circulo es:", area_circulo)
 //Estructuras de control
+var respuesta = prompt("Ingresa tu libro favorito", "Harry Potter");
+console.log("Tu respuesta es:", respuesta);
