@@ -1,0 +1,13 @@
+@import url(vars.css);
+.bg-primary {
+    background: var(--fondo-color);
+  }
+  .bg-secondary {
+    background: var(--fondo-color-alt);
+  }
+  .bg-info {
+    background: var(--color-info);
+  }
+  .bg-danger {
+    background: var(--color-danger);
+  }

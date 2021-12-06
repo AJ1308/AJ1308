@@ -1,0 +1,17 @@
+ol{
+    display: block;
+    line-height: 25px;
+}
+ol li:first-child{
+    color: #008000;
+}
+ol li:last-child{
+    color: #c90a0a;
+}
+/*even para par y odd para impar*/
+ol li:nth-child(4n+4){
+    background: yellow;
+}
+ol li:nth-last-child(4){
+    background: hotpink;
+}
