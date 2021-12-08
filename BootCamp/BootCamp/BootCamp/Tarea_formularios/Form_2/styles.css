@@ -1,0 +1,58 @@
+* {
+  font-family: "Josefin Sans", sans-serif;
+}
+form {
+  width: 500px;
+  height: 300px;
+  border: 1px solid #96c2ebb6;
+  box-shadow: 0 0 5px;
+  margin: auto;
+  padding: 20px 50px;
+  font-weight: bold;
+}
+.line1{
+    margin: 0px 5px;
+    width: 10px;
+    border-top: 1px solid #999;
+    position: relative;
+    top: 10px;
+    float: left;
+    
+}
+.line2{
+    margin: 0px 5px;
+    width: 290px;
+    border-top: 1px solid #999;
+    position: relative;
+    top: 10px;
+    left: 187px;
+}
+.line3 {
+  margin: 0px 5px;
+  width: 392px;
+  border-top: 1px solid #999;
+  position: relative;
+  top: 10px;
+  left: 85px;
+}
+
+.text {
+  color: blue;
+  font-size: larger;
+  font-weight: bold;
+  float: left;
+}
+/* label.name{
+       display: inline;
+       width: 30px;
+   } */
+label {
+  width: 100px;
+  display: inline-block;
+  line-height: 30px;
+  margin-left: 70px;
+}
+input#select,
+.required {
+  font-weight: bold;
+}

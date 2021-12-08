@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+html {
+  background-color: #ddd;
+}
+body {
+  padding: 30px;
+  font-size: 15px;
+}
+div {
+  padding: 10px;
+  width: 500px;
+  background-color: #fff;
+  border: 2px solid #008000;
+  margin: auto;
+  overflow: auto;
+}
+img {
+  float: left;
+  margin-right: 20px;
+}
+h2 {
+  margin-bottom: 20px;
+  border: 2px solid white;
+}
+p {
+    text-align: justify;
+  border: 2px solid #000;
+  float: left;
+  width: 200px;
+}
+br{
+    clear: both;
+}

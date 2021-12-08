@@ -1,0 +1,76 @@
+* {
+
+  font-family: "Josefin Sans", sans-serif;
+}
+header{
+    font-weight: normal;
+    line-height: 10px
+}
+form {
+  width: 400px;
+  height: 600px;
+  border: 1px solid #96c2ebb6;
+  box-shadow: 0 0 5px ;
+  margin: auto;
+  padding: 20px 35px;
+  font-weight: bold;
+}
+input{
+    width: 200px;
+    height: 20px;
+}
+input.name{
+    width: 93px;
+}
+input#area{
+    width: 50px;
+}
+input#number{
+    width: 129px;
+}
+label{
+    width: 70px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+label#question, input[type="radio"]{
+    display: inline;
+    width: 15px;
+    cursor: pointer;
+}
+p#first, p#last{
+    padding-right: 40px;
+    margin: 0;
+    position: relative;
+    display: inline;
+    color: grey;
+    font-size: small;
+    top: -30px;
+    left: 80px;
+}
+p#area, p#number{
+    padding-right: 7px;
+    margin: 0;
+    position: relative;
+    display: inline;
+    color: grey;
+    font-size: small;
+    top: -30px;
+    left: 75px;
+}
+div#question input, p{
+    display: inline;
+}
+div#question p{
+    padding-right: 105px;
+}
+
+
+
+input[type="submit"]{
+    width: 100px;
+    height: 30px;
+    font-size: large;
+    box-shadow: 0px 0px 3px;
+    cursor: pointer;
+}

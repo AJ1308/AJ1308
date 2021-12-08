@@ -1,0 +1,50 @@
+h1 {
+  /*B*/
+  padding: 10px;
+  /*C*/
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: blue solid 1px;
+}
+#subtitle {
+  /*D*/
+  padding: 5px 5px;
+  /*E*/
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: grey solid 2px;
+}
+#datos_libro {
+  /*A*/
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+    border: springgreen solid 1px;
+}
+#datos_libro li {
+  margin: 15px;
+
+}
+
+/* F
+.title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.actor {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.editorial {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.year {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.isbn {
+  margin-top: 15px;
+  margin-bottom: 15px;
+} */

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulario 01</title>
+  </head>
+  <body>
+    <form action="send.php" name="formulario" method="post">
+      <header>
+        <h2>Simple Event Registration</h2>
+        <h>Fill out the form to registrer to our event</h>
+        <br /><br />
+      </header>
+      <hr />
+      <br />
+      <label>Name</label>
+      <input type="text" name="name" class="name" required />
+      <input class="name" type="text" name="name" required/>
+      <div>
+      <p id="first">First Name</p>
+      <p id="last">Last Name</p>
+      </div>
+      <br />
+      <label>Title</label>
+      <input type="text" name="title" required/><br />
+      <label>Company</label>
+      <input type="text" name="Company" /><br />
+      <label>E-mail</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="ex: myname@example.com"
+        required
+      /><br />
+      <label>Phone Number</label>
+      <input class="name" type="tel" name="Number" id="area" /> -
+      <input id="number" type="tel" name="Number" />
+      <div>
+        <p id="area">Area Code</p>
+        <p id="number">Phone Number</p>
+        </div>
+      <br />
+      <label id="question">Are you an existing customer?</label><br />
+      <div id="question">
+        <input type="radio" name="question" value="y" /><p>Yes</p> 
+        <input type="radio" name="question" value="n" /><p>No</p> 
+      </div>
+      <br /><br />
+      <input type="submit" value="Register">
+    </form>
+  </body>
+</html>
