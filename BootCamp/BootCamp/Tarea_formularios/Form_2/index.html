@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulario 02</title>
+</head>
+<body>
+    <form action="send.php" name="formulario2" method="post">
+    <div>
+        <div class="line1">&nbsp;</div>
+        <div class="text">Personal Information</div>
+        <div class="line2">&nbsp;</div><br>
+        <label class="required">*First Name:</label>
+        <input type="text" name="First name" required class="required"><br>
+        <label class="name">Middle Name:</label>
+        <input type="text" name="Middle name"><br>
+        <label class="required">*Last Name</label>
+        <input type="text" name="Last Name" required class=""><br><br>
+    </div>
+    <div>
+        <div class="line1">&nbsp;</div>
+        <div class="text">Address</div>
+        <div class="line3">&nbsp;</div><br>
+        <label class="name">Address:</label>
+        <input type="text" name="First name" required><br>
+        <label class="name">City or Town:</label>
+        <input type="text" name="Middle name"><br>
+        <label class="name">State</label>
+        <input id="select" type="text" list="items" placeholder= "Choose a State">
+        <datalist id="items">
+            <option value="California">California</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Texas">Texas</option>
+        </datalist><br>
+        <label class="required">*Zip Code:</label>
+        <input type="text" name="zip">
+    </div>
+    </form>
+</body>
+</html>

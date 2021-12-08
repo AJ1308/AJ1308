@@ -1,0 +1,19 @@
+body {
+  color: blue;
+}
+section h1 small {
+  color: brown;
+}
+#parrafo2 {
+  color: forestgreen;
+}
+p#parrafo2 {
+  color: rgb(10, 129, 80);
+}
+.miclase {
+  color: lightcoral !important;
+}
+.otraclase {
+  color: rgb(41, 93, 161);
+  background-color: darkslategray;
+}

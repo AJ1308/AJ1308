@@ -1,0 +1,33 @@
+h2 {
+  color: #333;
+  font-size: 20px;
+}
+h4 {
+  color: #666;
+  font-size: 16px;
+}
+
+p,
+li {
+  font-size: 20px;
+  color: #6f6f6f;
+}
+a {
+  color: #00f;
+  font-size: 12px;
+}
+li {
+  margin: 10px;
+}
+body {
+  font-family: Segoe UI;
+  padding: 20px;
+  background-color: hsl(56, 100%, 95%);
+}
+img {
+  width: 300px;
+  box-shadow: 5px 10px 20px black;
+}
+ul{ 
+    padding: 0px 22px;
+}

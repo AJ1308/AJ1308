@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap");
+:root {
+  font-family: "Cairo", sans-serif;
+  --color-orange: orange;
+  --orange-2: #ff8800;
+  --orange-3: #ca6303;
+  --red: rgb(190, 5, 5);
+  --marine-blue: #002466;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+header,
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+header {
+  background: var(--color-orange);
+}
+nav {
+  background: var(--red);
+}
+header nav a {
+  margin: 0px 42px;
+}
+nav a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+main {
+  margin: 0px 0px 0px 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+aside {
+  width: 100%;
+  height: 80vh;
+  background: var(--orange-2);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items:center;
+  margin-left: 20px;
+}
+.rectangle{
+    width: 80%;
+    height: 40%;
+    background: var(--orange-3);
+}
+footer{
+    background: var(--marine-blue);
+    padding: 2%;
+}
+footer nav a{
+    margin: 0px 10px;
+}
+#redes{
+    background: var(--orange-2);
+}

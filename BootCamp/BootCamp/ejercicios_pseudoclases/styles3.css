@@ -1,0 +1,14 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+table, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0 5em;
+}
+/*primera forma*/
+tr:nth-child(3n-1){
+    background: red;
+}
+/*segunda forma
+tr:nth-last-child(3n+3){background: red;}*/
