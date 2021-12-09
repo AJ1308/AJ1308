@@ -10,8 +10,9 @@
     <p id="salida"></p>
     <!-- <script src="script.js"></script> -->
     <script>
-      let suerte = Math.random() * 6;
-      let dado = parseInt(suerte) + 1;
+    //   let suerte = Math.random() * 10;
+    //   let dado = parseInt(suerte) + 1;
+      let dado = Math.round(Math.random()* 10)
       let obj1 = document.getElementById("salida");
       if (dado > 3) {
         obj1.innerHTML = `Has ganado, ha salido el numero ${dado} `;
