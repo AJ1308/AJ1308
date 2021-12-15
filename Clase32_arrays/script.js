@@ -134,3 +134,23 @@ console.log(sports.lastIndexOf("Karate")); // 7
 console.log(sports.lastIndexOf("Karate", 4)); // -1
 console.log(sports.lastIndexOf("Karate", 6)); // 5
 console.log(sports.lastIndexOf("Karate", 8)); // 8
+/**ORDENACIONES */
+//Ojo, cada linea está modificando el array original
+names.sort(); //["Alberto", "Ana", "Mauricio", "Bernardo", "Zoe"]
+console.log(names);
+names.reverse(); //['Zoe', 'Mauricio', 'Bernardo', 'Ana', 'Alberto']
+console.log(names);
+
+//Funcion de comparación para ordenacion natural
+const array1 = [1, 8, 2, 32, 9, 7, 4];
+const fc = function (a, b) {
+    if (a>b) return 1
+    if (a<b) return -1
+  return 0;
+};
+const array = [1, 8, 2, 32, 9, 7, 4];
+const fc2 = function (a, b) {
+  return (b - a);
+};
+array.sort(fc);
+console.log(array);
