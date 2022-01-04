@@ -69,7 +69,7 @@ console.log("=============METODOS DE BUSQUEDA============================");
 /**METODOS DE BUSQUEDA */
 let frase2 = "Si no hacemos esto, no quedara nada que salvar";
 frase2 = new String(frase2);
-console.log(frase2)
+console.log(frase2);
 let pos2 = frase2.startsWith("Si"); //True
 console.log(pos2);
 console.log(frase2.search("^Si"));
@@ -83,3 +83,49 @@ console.log(nam.startsWith("M")); //True
 console.log(nam.startsWith("a", 1)); //True
 console.log(nam.endsWith("n", 3)); //True
 console.log(nam.includes("nz")); //True
+
+/**METODOS PARA TRANSFORMAR */
+console.log("============METODOS PARA TRANSFORMAR=================");
+let text = "   Hello  ";
+text.repeat(5); //NaNaNaNaNa
+text.toLowerCase(); //manz; en CSS es text-transform
+text.toUpperCase(); //MANZ
+console.log(text.trim()); //Hola
+
+let phrase = "anita lava la tina"; //Literal
+phrase = new String("anita lava la tina"); //Objetto (String)
+console.log(phrase.replace("la", "--"));
+console.log(phrase.replaceAll("a", "i"));
+
+let phrase2 = new String(
+  "A mamá, Roma le aviva el amor a papá, y a papá, Roma le aviva el amor a mamá"
+);
+console.log(phrase2);
+console.log(phrase2.substring(7)); //ese anula
+console.log(phrase2.substring(11, 16));
+//                     (Colocar un intervalo)
+
+let direccion = "Urb los patos 305";
+let no_casa = direccion.substr(14, 3);
+console.log("No. de casa", Number.parseInt(no_casa));
+
+/**CONVERTIR STRING A ARREGLO */
+console.log(phrase2.split(","));// separación por comas
+console.log(phrase2.split(" "));// separación por espacios
+console.log(phrase2.split(""));// muestra caracter por caracter
+
+/**RELLENAR CARACTERES TANTO DE DERECHA COMO IZQUIERDA */
+let palabra = new String("ocaso");
+console.log(palabra.padStart(10, "_"));
+console.log(palabra.padEnd(15, "*"));
+
+/**RECORRIDO DE ARREGLOS */
+let array = [1, 2, 3, 4, 5, 6, 7]; //Literal array
+// let array2 = new Array (1,2,3,4) //Objeto array
+//For(iterador; condicion; incremento )
+for (let i = array.length - 1; i >= 0; i--) {
+  //Recorrer desde i = 0 hasta 7 de uno en uno ↑
+  console.log(`pos[i = ${i}] : `, array[i]);
+}
+
+
