@@ -1,0 +1,21 @@
+/* .bg{
+    padding: 10px 10px;
+    background: rgb(150, 150, 150);
+    color: white;
+} */
+.box{
+    width: 100px;
+    height: 100px;
+    background: yellowgreen;
+}
+.bloque{
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+}
+.bold{
+    font-weight: bold;
+}
+.c-white{
+    color: white;
+}
