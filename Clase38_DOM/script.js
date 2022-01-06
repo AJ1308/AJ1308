@@ -48,7 +48,7 @@
 // console.log(divisor.getAttributeNames()); // ['id', 'class', 'style']
 // console.log(divisor.getAttribute("style")); // Valor del atributo style =>(background: lightgreen;)
 // divisor.removeAttribute("id"); // Eliminamos el atributo "id"
-// divisor.setAttribute("class", "caja"); // camabiamos el valor box -> caja
+// divisor.setAttribute("class", "caja"); // cambiamos el valor box -> caja
 
 // const attr_class = divisor.getAttributeNode("class"); // class="caja"
 // console.log(attr_class);
@@ -78,16 +78,42 @@
 
 // divisor.outerHTML = "<h1> Modificando el h1 </h1>"; // Modifica todo el html incluyendo al contenedor
 // console.log(divisor.outerHTML); // <div id="header"> <h1>Titu...</div>
-const img = document.createElement("img");
-img.src = "https://picsum.photos/536/354";
-img.alt = "Logo Javascript";
-document.body.appendChild(img);
+// const img = document.createElement("img");
+// img.src = "https://picsum.photos/536/354";
+// img.alt = "Logo Javascript";
+// document.body.appendChild(img);
 
-const div = document.createElement("div");
-div.textContent = "Esto es un div insertado con JS."
+// // CREANDO UN NODO <div> (Contenedor)
+// const div = document.createElement("div");
+// div.id = "div_insertado";
+// div.textContent = "Texto insertado desde JS";
+// // CREANDO UN NODO <h1>
+// const h1 = document.createElement("h1");
+// h1.id = "title";
+// h1.textContent = "Titulo H1";
+// // Inserta el h1 (hijo) dentro del div (contenedor)
 
-const h1 = document.createElement("h1")//
-h1.id = "titulo"
-h1.textContent = "Titulo h1"
-div.appendChild(h1)
-console.log(div);
+// const container = document.querySelector("#container"); // busqueda
+// container.appendChild(div);
+// // Inserta un elemento en una posición
+// // (antes del elemento -> beforebegin)
+// // (antes del texto -> afterbegin)
+// // (despues del texto -> beforeend)
+// // (despues del elemento -> beforeend)
+// div.insertAdjacentElement("beforebegin", h1);
+
+// console.log(div);
+
+/**EJERCICIO 2 */
+const lista = document.querySelector("ul"); // 1 elemento
+const items = document.querySelectorAll("ul > li"); // todos los elementos
+//const items = document.getElementsByTagName("li");
+
+console.log(items[0].isConnected);
+
+console.log("Eliminando el item 1");
+items[0].remove();
+console.log(items[0].isConnected);
+
+//lista.appendChild(items[0]); // insertarlo al final
+lista.insertAdjacentElement("afterbegin", items[0]); // inserta al inicio
