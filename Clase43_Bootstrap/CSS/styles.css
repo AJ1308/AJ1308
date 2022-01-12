@@ -30,3 +30,6 @@ header > .container{
     z-index: 2;
 
 }
+.col{
+    width: 400px;
+}

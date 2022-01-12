@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="CSS/styles.css" />
     <title>...</title>
   </head>
-  <body>
+  <body class="bg-light">
           <!--NAVBAR-->
     <nav
     class="navbar navbar-expand-md navbar-light bg-light"
@@ -99,12 +99,39 @@
   </nav>
   <!-- CONTENIDO -->
   <section class="py-5">
-      <div class="container">
+      <div class="container d-flex flex-column flex-md-row">
           <div class="row">
-              <div class="col"></div>
+              <div class="col-12 col-md-4 m-2">
+                <img
+                class="card-img-top"
+                src="../assets/comic.jpeg"
+                alt="..."
+              />
+              </div>
           </div>
           <div class="row">
-              <div class="col"></div>
+              <div class="col border bg-white col-12 m-1">
+                <div class="card_header m-0 p-0">
+                  <h4 id="name" class="fw-bolder">
+                    Captain America/Iron Man (2021)
+                  </h4>
+                  <h5 id="price" class="fw-bolder">
+                    Q50.00
+                  </h5>
+                  <div
+                  class=" text-warning small"
+                >
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <span class="px-2 text-dark">4.5</span>
+                </div>
+                  <span id="price"><strong>Format:</strong> Comic</span>
+                </div>
+
+              </div>
           </div>
       </div>
   </section>
