@@ -1,3 +1,38 @@
+// Utilizando FUNCIONES ASYCN (Asíncromas)
+
+function timeout(sec){
+  return new Promise(resolve=> setTimeout(resolve,sec*1000));
+}
+
+async function getUsersData() {
+// Traer informacion del servidor
+await timeout(3); // Simulando el tiempo de latencia
+const response = await fetch("data/users.json");
+// Validamos la respuesta
+if (!response.ok) {
+  // Promesa se rechazo
+  throw Error(response.statusText);
+}
+// Extraer la data
+const data = await response.json();
+return data;
+}
+
+// MAIN (Estructrurado -> Síncrono)
+async function main() {
+
+const users = await getUsersData().catch((err)=> alert(err));;
+const list = document.querySelector("#list_users");
+
+users.forEach((element) => {
+  const p = document.createElement("p");
+  p.textContent = `${element.first_name} ${element.last_name} : ${element.email}`;
+  list.appendChild(p);
+});
+
+}
+
+main();
 // function displayOnConsole(message="Hello"){
 //     console.log(`Message : '${message}' was sent after 5 seconds`);
 // }
@@ -64,50 +99,58 @@
 // .then(result => console.log(result))
 // .catch(result => console.log(result))
 
-// SIMULANDO UN CASO REAL
+// // SIMULANDO UN CASO REAL
 
 
-fetch("data/users.json")
-.then(response => {
-    console.log(response);
-    if(!response.ok){ //true or false
-        throw Error(response.statusText)
-    } 
-    return response.json()
-})
-.then(data => {
-    console.log(data);
-    const list = document.getElementById("list_users"); 
-    data.forEach(user => {
-        // console.log(user);
-        const p = document.createElement("p");
-        p.textContent = user.email;
-        list.appendChild(p);
-    });
-})
-.catch(error => console.warn(error))
+// fetch("data/users.json")
+//   .then((response) => {
+//     console.log(response);
+//     console.log("Validamos la respuesta de peticion");
+//     if (!response.ok) {
+//       throw Error(response.statusText);
+//     }
+//     data = response.json();
+//     return data;
+//   })
+//   .then((data) => {
+//     console.log(data);
+//     const list = document.querySelector("#list_users");
+
+//     data.forEach((element) => {
+//       const p = document.createElement("p");
+//       p.textContent = `${element.first_name} ${element.last_name} : ${element.email}`;
+//       list.appendChild(p);
+//     });
+
+//     // Mostrar en un UL utilizando DOM
+//   })
+//   .catch((err) => console.warn(err))
+//   .finally(() => console.log("La promesa ha finalizado"));
 
 
 
-async function getData() {
-    // TRAER INFORMACION DEL SERVIDOR
-  fetch("data/users.json")
-    .then((response) => {
-      console.log(response);
-      if (!response.ok) {
-        //true or false
-        throw Error(response.statusText);
-      }
-      return response.json();
-    })
-    .then(data => {
-      return data; 
-    })
-    .catch((error) => console.warn(error));
-}
 
 
-// MAIN
 
-const data = await getData();
-console.log(data)
+// async function getData() {
+//     // TRAER INFORMACION DEL SERVIDOR
+//   fetch("data/users.json")
+//     .then((response) => {
+//       console.log(response);
+//       if (!response.ok) {
+//         //true or false
+//         throw Error(response.statusText);
+//       }
+//       return response.json();
+//     })
+//     .then(data => {
+//       return data; 
+//     })
+//     .catch((error) => console.warn(error));
+// }
+
+
+// // MAIN
+
+// const data = await getData();
+// console.log(data)
