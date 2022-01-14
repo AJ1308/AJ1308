@@ -26,16 +26,38 @@ async function main() {
 
   comics.forEach((comic) => {
     const template = document.querySelector("#card_template");
+
     const clone = template.cloneNode(true);
     clone.removeAttribute("style"); // removiendo el diplay:none
     //IMAGEN
+    //Eliminar cards sin imagenes
+    if (comic.thumbnail.path.includes("image_not_available")) {
+      return;
+    }
     const comic_image = clone.querySelector(".comic_img");
     comic_image.setAttribute(
       "src",
       `${comic.thumbnail.path}.${comic.thumbnail.extension}`
     );
     //TITULO
-    const comic_title = clone.querySelector(".comic_name").textContent = comic.title;
+    clone.querySelector(".comic_name").textContent = comic.title;
+
+    //PRECIO ORIGINAL
+    let original_price =
+      comic.prices[0].price == 0 ? 2.99 : comic.prices[0].price; // TERNARIO
+    clone.querySelector(".comic_price").textContent = original_price;
+
+    //PRECIO DESCUENTO
+    clone.querySelector(".comic_price2").textContent = (
+      original_price - 2
+    ).toFixed(2);
+
+    // Acción al botón
+    clone
+    .querySelector(".comic_button").addEventListener("click", () => {
+      localStorage.setItem("product_id", comic.id);
+      window.open('/Clase43_Bootstrap/html/product.html','_blank')
+    });
 
     container.appendChild(clone);
   });
