@@ -1,23 +1,34 @@
-const APIKEY = "dbd90aa187aab034afbf3d1c5d2d564d"; //Public Key
-const HASH = "f1d3da48ce07c566918c63a65bf17f27"; //Mb5 Hash
-const TS = "1";
-const URL = "http://gateway.marvel.com/v1/public/";
+import CLIENT from "./modules/client.js";
+import STORAGE from "./modules/storage.js";
+import DOM from "./modules/dom.js";
+import { comicRender } from "./modules/renders.js";
 
-async function sendRequest(path) {
-  //Haciendo la peticion
-  const response = await fetch(
-    URL + path + "?ts=" + TS + "&apikey=" + APIKEY + "&hash=" + HASH
-  );
-  console.log(response);
-  //Validando la respuesta
-  if (!response.ok) throw Error(response.statusText);
-  //Extrayendo la informacion
-  const json = await response.json();
-  return json.data.results;
-}
-
+// Crear la funcion main para consumir el recurso...
 async function main() {
-  const product_id = localStorage.getItem("product_id");
-  const comic = await sendRequest("comics/" + product_id);
-  console.log(comic);
+  const product_id = STORAGE.get("product_id");
+  const data = await CLIENT.sendRequest("comics/" + product_id);
+  //Transformar  la data en informacion relevante
+  const comic = comicRender(data);
+  //Actualizar informacion del HTML
+  const card = DOM.find("#card");
+  DOM.find("#comic_image").src = comic.image;
+  DOM.find("#title", card).textContent = comic.title; //Búsqueda dentro del card
+  DOM.find("#price", card).textContent = "$" + comic.price.sale;
+  DOM.find("#format", card).textContent = comic.format;
+  DOM.find("#description", card).innerHTML = comic.description;
+  DOM.find("#stock", card).innerHTML = comic.stock;
+
+  comic.creators.forEach(({name,role}) => {
+    const li = DOM.create("li");
+    li.textContent = `${name}-${role}`;
+    DOM.find("#creators", card).appendChild(li);
+  });
+
+  DOM.find("#btn_add").addEventListener('click', () => {
+    const {id,title,price:{sale}} = comic;
+    STORAGE.setArray('cart',{id,title,sale});
+    window.location.href = "../index.html";
+  });
 }
+
+main();

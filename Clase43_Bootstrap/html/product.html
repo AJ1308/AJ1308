@@ -10,11 +10,7 @@
     <meta name="author" content="" />
     <title>Product View</title>
     <!-- Favicon-->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="assets/favicon.ico"
-    />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
@@ -27,16 +23,14 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="../CSS/styles.css" rel="stylesheet" />
   </head>
   <body>
     <!--NAVBAR-->
-    <nav
-      class="navbar navbar-expand-md navbar-light bg-light"
-    >
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
       <div class="container px-4">
         <!--LOGO-->
-        <a href="#" class="navbar-brand">
+        <a href="../index.html" class="navbar-brand">
           <img src="../assets/assets/marvel.svg" width="100" alt="" />
         </a>
         <!--TOGGLER (Barritas Mobile)-->
@@ -51,14 +45,11 @@
           <span class="navbar-toggler-icon"> </span>
         </button>
         <!--MENÚ DE NAVEGACIÓN-->
-        <div
-          id="navbar_menu"
-          class="navbar-collapse collapse"
-        >
+        <div id="navbar_menu" class="navbar-collapse collapse">
           <!--Lista de Items-->
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link active" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
@@ -73,41 +64,27 @@
                 aria-expanded="false"
                 >Shop</a
               >
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="drop_products"
-              >
+              <ul class="dropdown-menu" aria-labelledby="drop_products">
                 <li>
-                  <a class="dropdown-item" href="#">
-                    All Products
-                  </a>
+                  <a class="dropdown-item" href="#"> All Products </a>
                 </li>
                 <li>
                   <hr class="dropdown-divider" />
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Comics
-                  </a>
+                  <a class="dropdown-item" href="#"> Comics </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Series
-                  </a>
+                  <a class="dropdown-item" href="#"> Series </a>
                 </li>
               </ul>
             </li>
           </ul>
           <div class="d-flex">
-            <button
-              id="btn_cart"
-              class="btn btn-outline-dark"
-            >
+            <button id="btn_cart" class="btn btn-outline-dark">
               <i class="bi bi-cart-fill"></i>
               Cart
-              <span class="badge rounded-pill bg-dark ms-1">
-                0</span
-              >
+              <span class="badge rounded-pill bg-dark ms-1"> 0</span>
             </button>
           </div>
         </div>
@@ -124,16 +101,16 @@
                 class="card-img img-fluid"
                 src="../assets/comic.jpeg"
                 alt="Card image cap"
-                id="product-detail"
+                id="comic_image"
               />
             </div>
           </div>
           <!-- col end -->
           <div class="col-lg-7 mt-5">
-            <div class="card h-100">
+            <div id="card" class="card h-100">
               <div class="card-body">
-                <h1 class="h2">Marvel Previews (2017)</h1>
-                <p class="h3 py-2">$25.00</p>
+                <h1 id="title" class="h2">{{TITLE}}</h1>
+                <p id="price" class="h3 py-2">{{PRICE}}</p>
                 <div
                   class="d-flex justify-content-start small text-warning mb-2"
                 >
@@ -149,50 +126,27 @@
                   </li>
                   <li class="list-inline-item">
                     <p class="text-muted">
-                      <strong>Comic</strong>
+                      <strong id="format">{{FORMAT}}</strong>
                     </p>
                   </li>
                 </ul>
 
                 <h6>Description:</h6>
-                <p>
-                  The epic, untold love story between
-                  Marvel's two pre-eminent Black super
-                  heroes -- Storm and the Black Panther --
-                  is finally told, as only New York Times
-                  best-selling author Eric Jerome Dickey can
-                  do it! An orphaned street urchin, living
-                  by her wits on the unforgiving plains of
-                  Africa as she struggles to harness her
-                  slowly-developing mutant powers...A
-                  warrior Prince, embarking on his rite of
-                  passage as he ponders the great
-                  responsibility in his future...And a crew
-                  of ruthless mercenaries who'll stop at
-                  nothing to capture an elusive creature of
-                  legend -- the fabled wind-rider. What
-                  sparks occur when their paths intersect?
-                  Don't miss out on this story, True
-                  Believer, as it builds to a July Event
-                  that will shake the entire Marvel
-                  Universe.
-                </p>
+                <p id="description">{{DESCRIPTION}}</p>
                 <ul class="list-inline">
                   <li class="list-inline-item">
                     <h6>Avaliable Stock :</h6>
                   </li>
                   <li class="list-inline-item">
                     <p class="text-muted">
-                      <strong>4</strong>
+                      <strong id="stock">{{STOCK}} </strong>
                     </p>
                   </li>
                 </ul>
 
                 <h6>Creators:</h6>
-                <ul class="list-unstyled pb-3">
-                  <li>Ronald Byrd</li>
-                  <li>Jeff Christiansen</li>
-                  <li>Anthony Flamini</li>
+                <ul id="creators" class="list-unstyled pb-3">
+                  <!-- <li> CREATOR 1</li>...-->
                 </ul>
 
                 <form action="" method="GET">
@@ -204,9 +158,7 @@
                   <div class="row">
                     <div class="col-auto">
                       <ul class="list-inline pb-3">
-                        <li
-                          class="list-inline-item text-right"
-                        >
+                        <li class="list-inline-item text-right">
                           Quantity
                           <input
                             type="hidden"
@@ -216,25 +168,15 @@
                           />
                         </li>
                         <li class="list-inline-item">
-                          <span
-                            class="btn btn-dark"
-                            id="btn-minus"
-                            >-</span
-                          >
+                          <span class="btn btn-dark" id="btn-minus">-</span>
                         </li>
                         <li class="list-inline-item">
-                          <span
-                            class="badge bg-secondary"
-                            id="var-value"
+                          <span class="badge bg-secondary" id="var-value"
                             >1</span
                           >
                         </li>
                         <li class="list-inline-item">
-                          <span
-                            class="btn btn-dark"
-                            id="btn-plus"
-                            >+</span
-                          >
+                          <span class="btn btn-dark" id="btn-plus">+</span>
                         </li>
                       </ul>
                     </div>
@@ -242,7 +184,8 @@
                   <div class="row pb-3">
                     <div class="col d-grid">
                       <button
-                        type="submit"
+                        id="btn_add"
+                        type="button"
                         class="btn btn-danger btn-lg"
                         name="submit"
                         value="addtocard"
@@ -269,6 +212,6 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="../JS/product.js"></script>
+    <script type="module" src="../JS/product.js"></script>
   </body>
 </html>
