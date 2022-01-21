@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Soy el titulo de la página</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
     <div id="app">
-      {{ message }}
+      <div id="app">
+        <h1 v-bind:title="message" >Todo List</h1>
+        <span v-if="seen">Ahora me ves</span>
+
+        <input type="text" v-model="newTask"/>
+
+        <button v-on:click="addTask">Agregar</button>
+        <ul>
+            <todo-item v-for="task in tasks" v-bind:task="task">
+            </todo-item>
+        </ul>
+        <span>{{ tasks.length }}</span>
 
       <btn-demo initial="0"></btn-demo>
-      <btn-demo initial="5"></btn-demo>
-      <btn-demo initial="8"></btn-demo>
+      <btn-demo initial="0"></btn-demo>
+      <btn-demo initial="0"></btn-demo>
     </div>
     <script src="button.js"></script>
+    <script src="todo_item.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
