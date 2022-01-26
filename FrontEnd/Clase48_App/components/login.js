@@ -2,12 +2,17 @@ Vue.component("login-form", {
     data: function() {
         return {
             username: "",
-            password: ""
+            password: "",
+            hasError: false
         }
     },
     methods: {
+        GoToSignUp: function() {
+            this.$router.push("/sign-up")
+        },
         DoLogin: function() {
             var self = this;
+            self.hasError = false
             fetch("http://silabuz-api-project.herokuapp.com/authentication/login/", {
                 method: "POST",
                 headers: {
@@ -23,7 +28,14 @@ Vue.component("login-form", {
             })
             .then(function(data){
                 console.log(data)
-                self.$emit("on-login", data.token)
+                if (data.hasOwnProperty("token")) {
+                    //self.$emit("on-login", data.token)
+                    localStorage.setItem("token", data.token)
+                    self.$router.push("/product-list")
+                } else {
+                    self.hasError = true
+                }
+                
             })
             .catch(function(error) {
                 console.log("Error: ", error)
@@ -32,6 +44,9 @@ Vue.component("login-form", {
     },
     template: `
         <form class="form">
+            <div class="alert alert-danger" v-if="hasError">
+                Credenciales no validas
+            </div>
             <div class="form-group">
                 <label>Usuario</label>
                 <input class="form-control" type="text" v-model="username"></input>
@@ -42,6 +57,10 @@ Vue.component("login-form", {
             </div>
             <button class="btn btn-primary col-12" @click.prevent="DoLogin" type="submit">
                 Iniciar Sesion
+            </button>
+            <br/><br/>
+            <button class="btn btn-success col-12" @click="GoToSignUp" type="button">
+                Registrarme
             </button>
         </form>
     `
